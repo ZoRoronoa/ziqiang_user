@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+</head>
+<head>
+    <p>
+	<title>search</title>
+	<style>
+		body{
+            background: #FFFFFF;
+			margin:0;
+			height:auto;
+			width:auto
+		}
+    </style></p>
+</head>
+<body>
+	<!--<div class="top-div"></div>
+	<form class="search-form">
+		<input type="search" class="search-text"/>
+		<input type="submit" value="搜索" class="search-button"/>
+	</form>
+    <div class="input">
+        <input type="text" id="value1" class="field" placeholder="搜索请输入关键字"></div>-->
+    <!--<form method="get" action="http://127.0.0.1:8000/search/">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+  {% csrf_token %}
+  <input type="search" placeholder="搜索" required>
+  <button type="submit">搜索</button>
+</form>-->
+<form action="/search/" method="get">
+        <input type="text" name="q">
+    <input type="submit" value="Search"></form>
+
+
+
+
+
+</body>
+<body><p>通知列表</p>
+        {% for blog in blogs %}
+        <p>{{blog.title}}&nbsp&nbsp&nbsp:&nbsp&nbsp&nbsp{{blog.content}}</p>
+        <br>
+        {% endfor %}
+
+</body>
+</html>
